@@ -1,0 +1,16 @@
+{
+  "index_patterns": ["cowrie-logs-*"],
+  "template": {
+    "mappings": {
+      "properties": {
+        "geoip": {
+          "properties": {
+            "location": {
+              "type": "geo_point"
+            }
+          }
+        }
+      }
+    }
+  }
+}
