@@ -1,0 +1,13 @@
+# Ignore logs
+cowrie_logs/*
+!cowrie_logs/.gitkeep
+
+# Ignore Elasticsearch/Logstash/Kibana data
+logstash/logs/*
+logstash/data/*
+elasticsearch/data/*
+volumes/
+
+# Python cache
+__pycache__/
+*.pyc
