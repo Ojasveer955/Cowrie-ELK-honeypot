@@ -19,6 +19,7 @@ services:
     volumes:
       - ./logstash/pipeline/:/usr/share/logstash/pipeline/
       - ./cowrie_logs:/usr/share/cowrie_logs/
+      - ./logstash/geoip/GeoLite2-City.mmdb:/usr/share/logstash/geoip/GeoLite2-City.mmdb:ro
     ports:
       - "5000:5000"
     depends_on:
