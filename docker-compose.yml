@@ -12,6 +12,8 @@ services:
       - "9200:9200"
     networks:
       - elk
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
 
   logstash:
     image: docker.elastic.co/logstash/logstash:8.13.0
@@ -20,6 +22,7 @@ services:
       - ./logstash/pipeline/:/usr/share/logstash/pipeline/
       - ./cowrie_logs:/usr/share/cowrie_logs/
       - ./logstash/geoip/GeoLite2-City.mmdb:/usr/share/logstash/geoip/GeoLite2-City.mmdb:ro
+      - ./cowrie_template.json:/usr/share/logstash/cowrie_template.json:ro
     ports:
       - "5000:5000"
     depends_on:
@@ -39,7 +42,13 @@ services:
       - elasticsearch
     networks:
       - elk
+    volumes:
+      - kibadata:/usr/share/kibana/data
 
 networks:
   elk:
     driver: bridge
+
+volumes:
+  esdata:
+  kibadata:
