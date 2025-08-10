@@ -1,14 +1,91 @@
 {
-  "index_patterns": ["cowrie-logs-*"],
+  "index_patterns": ["cowrie-logs-*", "cowrie-enriched-*"],
   "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0
+    },
     "mappings": {
       "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "timestamp": {
+          "type": "date"
+        },
+        "src_ip": {
+          "type": "ip"
+        },
+        "dst_ip": {
+          "type": "ip"
+        },
         "geoip": {
           "properties": {
             "location": {
               "type": "geo_point"
+            },
+            "geo_point": {
+              "type": "geo_point"
+            },
+            "ip": {
+              "type": "ip"
+            },
+            "geo": {
+              "properties": {
+                "country_name": {"type": "keyword"},
+                "country_iso_code": {"type": "keyword"},
+                "city_name": {"type": "keyword"},
+                "region_name": {"type": "keyword"},
+                "continent_code": {"type": "keyword"},
+                "location": {
+                  "properties": {
+                    "lat": {"type": "float"},
+                    "lon": {"type": "float"}
+                  }
+                }
+              }
             }
           }
+        },
+        "abuseipdb": {
+          "properties": {
+            "confidence_score": {
+              "type": "integer"
+            },
+            "country_code": {
+              "type": "keyword"
+            },
+            "isp": {
+              "type": "keyword"
+            },
+            "usage_type": {
+              "type": "keyword"
+            },
+            "is_tor": {
+              "type": "boolean"
+            },
+            "total_reports": {
+              "type": "integer"
+            },
+            "last_reported": {
+              "type": "date"
+            }
+          }
+        },
+        "risk_level": {
+          "type": "keyword"
+        },
+        "session": {
+          "type": "keyword"
+        },
+        "eventid": {
+          "type": "keyword"
+        },
+        "username": {
+          "type": "keyword"
+        },
+        "password": {
+          "type": "keyword"
         }
       }
     }

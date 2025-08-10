@@ -21,6 +21,7 @@ services:
     volumes:
       - ./logstash/pipeline/:/usr/share/logstash/pipeline/
       - ./cowrie_logs:/usr/share/cowrie_logs/
+      - ./enriched_logs:/usr/share/enriched_logs/
       - ./logstash/geoip/GeoLite2-City.mmdb:/usr/share/logstash/geoip/GeoLite2-City.mmdb:ro
       - ./cowrie_template.json:/usr/share/logstash/cowrie_template.json:ro
     ports:

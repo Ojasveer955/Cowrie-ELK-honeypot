@@ -1,13 +1,38 @@
-# Ignore logs
-cowrie_logs/*
-!cowrie_logs/.gitkeep
+# Environment and API keys
+.env
 
-# Ignore Elasticsearch/Logstash/Kibana data
+# Logs and data files
+cowrie_logs/*.json*
+enriched_logs/*.json*
+!cowrie_logs/.gitkeep
+!enriched_logs/.gitkeep
+
+# AbuseIPDB cache (contains sensitive data)
+abuseipdb_cache.json
+
+# Elasticsearch/Logstash/Kibana data
 logstash/logs/*
 logstash/data/*
 elasticsearch/data/*
 volumes/
 
+# GeoIP database (large file)
+logstash/geoip/*.mmdb
+*.mmdb
+logstash/geoip/GeoLite2-City.mmdb
+
 # Python cache
 __pycache__/
 *.pyc
+*.pyo
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
