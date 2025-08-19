@@ -22,7 +22,7 @@ This project integrates the Cowrie SSH/Telnet honeypot with the ELK (Elasticsear
 - Automated log collection from Cowrie honeypot
 - Log enrichment with GeoIP, ASN, and threat intelligence sources (e.g., AbuseIPDB)
 - Custom enrichment scripts for advanced analysis
-- Pre-built Kibana dashboards for threat hunting and reporting
+- Pre-built and custom Kibana dashboards for threat hunting and reporting
 - Modular pipeline for adding new enrichment or log sources
 - Docker Compose for easy deployment
 - Secure and ethical deployment guidelines
@@ -95,3 +95,4 @@ A Terraform script to codify the honeypot and supporting infrastructure as code 
 
 ## License
 This project is licensed under the MIT License. See the full license text in the [LICENSE](./LICENSE) file or read the [MIT License](https://opensource.org/licenses/MIT) online.
+
