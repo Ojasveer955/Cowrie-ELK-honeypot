@@ -59,7 +59,7 @@ For log enrichment with AbuseIPDB, you need to obtain a free API key from https:
 4. Access Kibana at `http://localhost:5601`
 
 ### Manual Setup
-Instructions for manual installation are provided in the [docs/manual_setup.md](docs/manual_setup.md) (if available).
+Instructions for manual installation will be updated soon.
 
 ## Configuration
 - **Cowrie**: Configure in `cowrie_template.json` and `cowrie_logs/`
@@ -95,4 +95,5 @@ A Terraform script to codify the honeypot and supporting infrastructure as code 
 
 ## License
 This project is licensed under the MIT License. See the full license text in the [LICENSE](./LICENSE) file or read the [MIT License](https://opensource.org/licenses/MIT) online.
+
 
