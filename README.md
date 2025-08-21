@@ -51,6 +51,36 @@ You must manually download the GeoLite2 City database from MaxMind (https://dev.
 
 ### AbuseIPDB API Key
 For log enrichment with AbuseIPDB, you need to obtain a free API key from https://www.abuseipdb.com/ and add it to your environment or configuration as required by the enrichment scripts and Logstash pipeline.
+---
+
+### Sample Dashboards
+
+Below are some of the custom developed dahsboards, regarding the offending IP, usernames and passwords used, the protocol, etc.
+
+#### World Offending IP Geolocation Map
+![World Map](/Images/World%20Map.png)
+
+#### Protocol Distribution
+![Protocol Distribution](/Images/Protocol%20Distribution.png)
+
+#### Top 10 IPs
+![Top 10 IPs](/Images/Top%2010%20IPs.png)
+
+#### Top 10 Usernames Attempted
+![Top 10 Usernames Attempted](/Images/Top%20Usernames%20Used.png)
+
+#### Top 10 Passwords Attempted
+![Top 10 Passwords Attempted](/Images/Top%20Passwords%20Used.png)
+
+#### Offending IP Abuse Confidence
+![Offending IP Abuse Confidence](/Images/Offending%20IP%20Abuse%20Confidence.png)
+
+#### Commands Executed
+![Commands Executed](/Images/Commands%20Executed.png)
+
+#### Top Attacker COuntries
+![Top 10 Attacker Countries](/Images/Top%20Attacker%20Countries.png)
+---
 
 ### Quickstart
 1. Clone this repository

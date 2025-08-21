@@ -1,0 +1,103 @@
+{
+  "index_patterns": ["cowrie-enriched-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0
+    },
+    "mappings": {
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "timestamp": {
+          "type": "date"
+        },
+        "src_ip": {
+          "type": "ip"
+        },
+        "dst_ip": {
+          "type": "ip"
+        },
+        "duration": {
+          "type": "float"
+        },
+        "eventid": {
+          "type": "keyword"
+        },
+        "message": {
+          "type": "text"
+        },
+        "session": {
+          "type": "keyword"
+        },
+        "sensor": {
+          "type": "keyword"
+        },
+        "username": {
+          "type": "keyword"
+        },
+        "password": {
+          "type": "keyword"
+        },
+        "protocol": {
+          "type": "keyword"
+        },
+        "version": {
+          "type": "keyword"
+        },
+        "input": {
+          "type": "text"
+        },
+        "command": {
+          "type": "text"
+        },
+        "risk_level": {
+          "type": "keyword"
+        },
+        "abuseipdb": {
+          "properties": {
+            "confidence_score": {
+              "type": "integer"
+            },
+            "country_code": {
+              "type": "keyword"
+            },
+            "isp": {
+              "type": "keyword"
+            },
+            "is_tor": {
+              "type": "boolean"
+            },
+            "last_reported": {
+              "type": "date"
+            },
+            "total_reports": {
+              "type": "integer"
+            },
+            "usage_type": {
+              "type": "keyword"
+            }
+          }
+        },
+        "geoip": {
+          "properties": {
+            "geo_point": {
+              "type": "geo_point"
+            },
+            "location": {
+              "properties": {
+                "lat": {
+                  "type": "float"
+                },
+                "lon": {
+                  "type": "float"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
