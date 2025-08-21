@@ -51,6 +51,7 @@ You must manually download the GeoLite2 City database from MaxMind (https://dev.
 
 ### AbuseIPDB API Key
 For log enrichment with AbuseIPDB, you need to obtain a free API key from https://www.abuseipdb.com/ and add it to your environment or configuration as required by the enrichment scripts and Logstash pipeline.
+
 ---
 
 ### Sample Dashboards
